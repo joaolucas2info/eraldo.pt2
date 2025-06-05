@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    form {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: #ffffff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    input[type="tel"]::placeholder {
+      color: #bbbbbb;
+    }
+
+.Enviar {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+}
+      
+    
+
+    input[type="submit"]:hover {
+      background-color: #cccccc;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      color: #888888;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    .error {
+      border: 2px solid red;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="contatoForm" action="processa_contato.php" method="POST">
+    <h2>Login</h2>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+    <span id="nome-error" class="error-message"></span>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required placeholder="nome@gmail.com">
+    <span id="email-error" class="error-message"></span>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx">
+    <span id="telefone-error" class="error-message"></span>
+
+   
+    
+   
+    <a href="lfc2.html"class="Enviar">Enviar</a>
+    <a href="lfc.html">Voltar</a>
+  </form>
+
+  <script src="validacao.js"></script>
+</body>
+</html>
